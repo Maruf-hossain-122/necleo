@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CreateProjectCard from "../CreateProjectCard/CreateProjectCard";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import ViewProjectCard from "../ViewProjectCard/ViewProjectCard";
 
 const MyProjects = () => {
   const [projectData, setProjectData] = useState();
@@ -16,7 +17,15 @@ const MyProjects = () => {
         <h2 className="text-5xl font-semibold  ">My Projects</h2>
       </div>
       <div>
-        <CreateProjectCard />
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-5xl">
+          <div>
+            <CreateProjectCard />
+          </div>
+          <div>
+            <ViewProjectCard />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1  lg:grid-cols-2  max-w-5xl ">
           {/* <ProjectCard /> */}
           {projectData?.map((project, index) => (

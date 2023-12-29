@@ -11,7 +11,7 @@ const Sidebar = ({ isSidebarVisible }) => {
     <div>
       {/* sidebar container */}
       <div
-        className={` md:flex flex-col min-h-screen justify-between pr-[0.5rem]`}
+        className={` md:flex flex-col min-h-screen justify-between pr-[0.5rem] fixed`}
       >
         {/* upper side */}
         <div>

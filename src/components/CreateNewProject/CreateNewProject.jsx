@@ -78,7 +78,7 @@ const CreateNewProject = () => {
 
           <button
             type="submit"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+            class="bg-blue-500 hover:bg-blue-700 bg-primary text-dashboardBg font-semibold py-2 px-4 border border-blue-700 rounded-lg"
           >
             Create
           </button>
