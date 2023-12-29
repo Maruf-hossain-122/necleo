@@ -14,7 +14,8 @@ module.exports = {
     colors: {
       primary: "#FA782F",
       secondary: "#C4C4C4;",
-      dashboardBg: "#F8F8F8"
+      dashboardBg: "#F8F8F8",
+      red: "#EE4B2B"
     },
     extend: {},
   },

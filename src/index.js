@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import CreateNewProject from './components/CreateNewProject/CreateNewProjec';
+import CreateNewProject from './components/CreateNewProject/CreateNewProject';
 const router = createBrowserRouter([
   {
     path: "/",
