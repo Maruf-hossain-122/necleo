@@ -8,7 +8,7 @@ function App() {
     setSidebarVisible(!isSidebarVisible);
   };
   return (
-    <div className="App">
+    <div>
       <Navbar toggleSidebar={toggleSidebar} isSidebarVisible={isSidebarVisible} />
       <Dashboard isSidebarVisible={isSidebarVisible} />
     </div>

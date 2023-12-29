@@ -1,9 +1,10 @@
 import React from "react";
+import MyProjects from "../MyProjects/MyProjects";
 
 const DashboardContent = () => {
   return (
-    <div className="flex justify-center bg-dashboardBg mt-[11px] items-center min-h-screen min-w-screen">
-      Dashboard contents here
+    <div className=" bg-dashboardBg mt-[11px] min-h-screen  ">
+      <MyProjects />
     </div>
   );
 };
