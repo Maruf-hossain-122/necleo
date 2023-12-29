@@ -7,7 +7,7 @@ const Dashboard = ({ isSidebarVisible }) => {
     <div
       className={`${
         isSidebarVisible ? "grid-cols-[200px,auto]" : "grid-cols-1"
-      } grid md:grid-cols-[200px,auto]`}
+      } grid md:grid-cols-[200px,auto] md:place-items-stretch `}
     >
       <div className={`${isSidebarVisible ? "block" : "hidden"} md:block`}>
         <Sidebar isSidebarVisible={isSidebarVisible} />

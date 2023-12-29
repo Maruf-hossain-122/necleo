@@ -1,5 +1,4 @@
 import React from "react";
-import "./Navbar.css";
 import logo from "../../assets/icons/logo.svg";
 import userImg from "../../assets/icons/user.svg";
 import dropdownIcon from "../../assets/icons/dropdown.svg";
@@ -53,11 +52,11 @@ const Navbar = ({ toggleSidebar, isSidebarVisible }) => {
                   <img src={dropdownIcon} alt="" />
                 </div>
               </button>
-              <div class="dropdown-content">
+              {/* <div class="dropdown-content">
                 <a href="#/">Profile</a>
                 <a href="#/">Settings</a>
                 <a href="#/">Logout</a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
