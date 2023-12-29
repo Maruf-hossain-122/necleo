@@ -3,7 +3,7 @@ import "./CreateNewProject.css";
 import upload from "../../assets/icons/upload.svg";
 const CreateNewProject = () => {
   return (
-    <div className="w-[404px] h-[265px] ml-[52px] bg-[#fff] relative flex flex-col items-center justify-center rounded-[10px]">
+    <div className="w-[404px] h-[265px] md:ml-[52px] bg-[#fff] relative flex flex-col items-center justify-center rounded-[10px]">
       {/* img part */}
       <div className=" w-[360px] h-[180px] bg-[#FA782F66] flex items-center justify-center  rounded-[10px]">
         <div>
