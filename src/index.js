@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CreateNewProject from './components/CreateNewProject/CreateNewProject';
+import { Toaster } from 'react-hot-toast';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,7 @@ root.render(
     <RouterProvider router={router}>
       <App />
     </RouterProvider>
+    <Toaster />
   </React.StrictMode>
 );
 

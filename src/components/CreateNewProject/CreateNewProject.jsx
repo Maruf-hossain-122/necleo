@@ -3,15 +3,40 @@ import { Link } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import CustomInput from "../CustomInput/CustomInput";
+import { backend_url } from "../../utils";
+import toast from "react-hot-toast";
 const CreateNewProject = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    fetch(`${backend_url}/projects`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        toast.success("Project created successfully");
+        reset();
+      })
+      .catch((error) => {
+        // Handle errors during the fetch
+        toast.error("Something went wrong");
+        console.error("Error:", error);
+      });
+  };
 
   return (
     <div>
