@@ -7,13 +7,13 @@ import { MdDelete, MdEdit } from "react-icons/md";
 const ProjectDetails = () => {
   const [projectData, setProjectData] = useState("");
   const { id } = useParams();
-  console.log(id);
+  //   console.log(id);
   useEffect(() => {
     fetch(`${backend_url}/projects/${id}`)
       .then((res) => res.json())
       .then((data) => setProjectData(data));
   }, []);
-//   console.log({ projectData });
+  //   console.log({ projectData });
   return (
     <div className="bg-dashboardBg min-h-screen">
       <div className="mb-5">
@@ -60,7 +60,9 @@ const ProjectDetails = () => {
             </div>
             {/* icons */}
             <div className="flex gap-5 text-xl mt-2">
-              <MdEdit />
+              <Link to={`/update/${projectData?._id}`}>
+                <MdEdit />
+              </Link>
               <MdDelete className="text-[#FF0000]" />
             </div>
           </div>

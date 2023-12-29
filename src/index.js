@@ -11,6 +11,7 @@ import CreateNewProject from './components/CreateNewProject/CreateNewProject';
 import { Toaster } from 'react-hot-toast';
 import Projects from './components/Projects/Projects';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails';
+import EditProject from './components/EditProject/EditProject';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/:id",
     element: <ProjectDetails />,
+  },
+  {
+    path: "/update/:id",
+    element: <EditProject />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
