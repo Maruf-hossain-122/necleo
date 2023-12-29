@@ -5,12 +5,23 @@ import userImg from "../../assets/icons/user.svg";
 import dropdownIcon from "../../assets/icons/dropdown.svg";
 import line from "../../assets/icons/line.svg";
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <div>
       <div className="flex justify-between items-center md:ml-[5rem] md:mr-[2rem]">
-        {/* left side */}
-        <div>
+        <div className="flex items-center gap-2  md:hidden">
+          <div className="ml-3 text-4xl">
+            <button onClick={toggleSidebar} className="block md:hidden">
+              ☰
+            </button>
+          </div>
+          {/* left side */}
+          <div>
+            <img src={logo} alt="" />
+          </div>
+        </div>
+        {/* logo */}
+        <div className="hidden md:block">
           <img src={logo} alt="" />
         </div>
         {/* right side */}

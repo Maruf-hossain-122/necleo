@@ -1,11 +1,10 @@
 import React from 'react';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 const Home = () => {
     return (
         <div>
-            <h1 className='text-xl'>
-                This is home
-            </h1>
+            <Dashboard />
         </div>
     );
 };
