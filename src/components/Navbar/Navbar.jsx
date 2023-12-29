@@ -4,15 +4,16 @@ import logo from "../../assets/icons/logo.svg";
 import userImg from "../../assets/icons/user.svg";
 import dropdownIcon from "../../assets/icons/dropdown.svg";
 import line from "../../assets/icons/line.svg";
-
-const Navbar = ({ toggleSidebar }) => {
+import { RxCross1 } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi";
+const Navbar = ({ toggleSidebar, isSidebarVisible }) => {
   return (
     <div>
       <div className="flex justify-between items-center md:ml-[5rem] md:mr-[2rem]">
         <div className="flex items-center gap-2  md:hidden">
           <div className="ml-3 text-4xl">
             <button onClick={toggleSidebar} className="block md:hidden">
-              ☰
+              {!isSidebarVisible ? <GiHamburgerMenu /> : <RxCross1 />}
             </button>
           </div>
           {/* left side */}

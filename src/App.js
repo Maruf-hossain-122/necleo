@@ -9,7 +9,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Navbar toggleSidebar={toggleSidebar} />
+      <Navbar toggleSidebar={toggleSidebar} isSidebarVisible={isSidebarVisible} />
       <Dashboard isSidebarVisible={isSidebarVisible} />
     </div>
   );
