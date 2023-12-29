@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CreateNewProject from "../CreateNewProject/CreateNewProject";
+import CreateProjectCard from "../CreateProjectCard/CreateProjectCard";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 const MyProjects = () => {
@@ -16,7 +16,7 @@ const MyProjects = () => {
         <h2 className="text-5xl font-semibold  ">My Projects</h2>
       </div>
       <div>
-        <CreateNewProject />
+        <CreateProjectCard />
         <div className="grid grid-cols-1  lg:grid-cols-2  max-w-5xl ">
           {/* <ProjectCard /> */}
           {projectData?.map((project, index) => (

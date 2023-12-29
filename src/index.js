@@ -7,17 +7,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './Home';
+import CreateNewProject from './components/CreateNewProject/CreateNewProjec';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-    ],
+  },
+  {
+    path: "/create-project",
+    element: <CreateNewProject />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
