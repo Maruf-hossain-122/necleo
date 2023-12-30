@@ -1,3 +1,26 @@
+# React Dashboard
+
+A responsive dashboard using ReactJs and TailwindCSS.
+
+## 🔗 Live site
+
+Frontend - https://react-dashboard-elite.vercel.app/
+
+Server - https://react-dashboard-backend.vercel.app
+
+## Tech Stack
+
+**Client:** React, TailwindCSS
+
+**Server:** Node, Express, MongoDB
+
+## Features
+
+- Users are empowered to unleash their creativity by crafting brand-new projects
+- Embark on a journey of discovery as you explore a myriad of captivating projects
+- Fuel the fire of progress! Seamlessly update your projects with the latest and greatest improvements
+- Embrace the power of transformation! Delete or modify projects with a simple click
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
