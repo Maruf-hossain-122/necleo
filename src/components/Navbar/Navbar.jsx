@@ -7,7 +7,7 @@ import { RxCross1 } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = ({ toggleSidebar, isSidebarVisible }) => {
   return (
-    <div>
+    <div className="sticky top-0 bg-white z-50">
       <div className="flex justify-between items-center md:ml-[5rem] md:mr-[2rem]">
         <div className="flex items-center gap-2  md:hidden">
           <div className="ml-3 text-4xl">

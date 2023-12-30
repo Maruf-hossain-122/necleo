@@ -1,10 +1,13 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { backend_url } from "../../utils";
 import { IoArrowBack } from "react-icons/io5";
 import { MdDelete, MdEdit } from "react-icons/md";
+import toast from "react-hot-toast";
 
 const ProjectDetails = () => {
+  const navigate = useNavigate();
   const [projectData, setProjectData] = useState("");
   const { id } = useParams();
   //   console.log(id);
@@ -14,6 +17,22 @@ const ProjectDetails = () => {
       .then((data) => setProjectData(data));
   }, []);
   //   console.log({ projectData });
+  const handleDelete = () => {
+    // console.log("I am deleting.");
+    const confirmation = confirm("Are you sure, you want to delete ?");
+    // console.log(confirmation);
+    if (confirmation) {
+      fetch(`${backend_url}/projects/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          toast.success("Successfully deleted the project");
+          navigate("/projects");
+          console.log(data);
+        });
+    }
+  };
   return (
     <div className="bg-dashboardBg min-h-screen">
       <div className="mb-5">
@@ -63,7 +82,7 @@ const ProjectDetails = () => {
               <Link to={`/update/${projectData?._id}`}>
                 <MdEdit />
               </Link>
-              <MdDelete className="text-[#FF0000]" />
+              <MdDelete onClick={handleDelete} className="text-[#FF0000]" />
             </div>
           </div>
         </div>

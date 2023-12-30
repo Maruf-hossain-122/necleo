@@ -28,14 +28,14 @@ const Projects = ({ project }) => {
     //     </div>
     //   ))}
     // </div>
-    <div className="bg-dashboardBg">
+    <div>
       {" "}
       <div className="mb-10">
         <Link to={"/"}>
           <IoArrowBack className="text-3xl ml-4 mt-1" />
         </Link>
       </div>
-      <div className="grid grid-cols-1   max-w-6xl mx-auto md:grid-cols-3  bg-dashboardBg min-h-screen ">
+      <div className="grid grid-cols-1 max-w-6xl mx-auto  lg:grid-cols-3   place-items-center">
         {projectData?.map((project) => (
           <Link to={`/projects/${project._id}`}>
             <div
